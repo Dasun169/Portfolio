@@ -12,7 +12,7 @@ body {
 
 .container {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     padding: 20px;
     background-color: #f0f0f0;
 }
@@ -21,87 +21,73 @@ body {
     flex: 1;
     margin: 10px;
     padding: 20px;
-    border-radius: 50px;
-}
-
-.my-details {
+    border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.my-image {
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.my-image img {
+.project img {
     max-width: 100%;
     height: auto;
-    border-radius: 50px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
-.footer {
-    background-color: #4CAF50;
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-.my-details h1{
-    font-size: 40px;
-    color: #000;
+.achievements {
+    flex-basis: 100%;
 }
 
-.my-details p{
-    text-indent: 50px;
-    font-style: italic;
+h2 {
+    margin-bottom: 10px;
 }
 
-.header {
-    background-color: #EAEEFA;
-    padding: 20px;
-    text-align: center;
-    color: #41026b;
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
-nav ul {
+.header nav ul {
     list-style-type: none;
     padding: 0;
 }
 
-nav ul li {
+.header nav ul li {
     display: inline;
     margin: 0 15px;
 }
 
-nav ul li a {
+.header nav ul li a {
     text-decoration: none;
     color: #41026b;
     font-weight: bold;
 }
 
-nav ul li a:hover {
+.header nav ul li a:hover {
     text-decoration: underline;
 }
 
-.footer {
-    background-color: #4CAF50;
-    text-align: center;
-    color: white;
-}
-
 @media (max-width: 600px) {
+    .header {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
     .container {
         flex-direction: column;
+        padding: 10px;
     }
 
     .box {
         margin: 10px 0;
+        padding: 15px;
     }
 
-    .header {
-        padding: 10px;
+    .project img {
+        max-width: 100%;
+        height: auto;
     }
 
     .header nav ul {
